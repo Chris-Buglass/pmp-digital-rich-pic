@@ -22,8 +22,8 @@ function check (name, pass) {
   var valid = true
 
   // Simple method to prevent short-circut and use timing-safe compare
-  valid = compare(name, process.env.PASSWORD) && valid
-  valid = compare(pass, process.env.USER) && valid
+  valid = compare(pass, process.env.PASSWORD) && valid
+  valid = compare(name, process.env.USER) && valid
 
   return valid
 }
