@@ -12,6 +12,7 @@
     "minimist": "^0.0.10",
     "node-static": "^0.7.11",
     "optimist": "^0.6.1",
+    "tsscmp": "^1.0.6",
     "wordwrap": "^0.0.3"
   },
   "scripts": {
