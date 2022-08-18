@@ -1,33 +1,9 @@
+var express = require('express');
+var app = express();
+var path = require('path');
 
-var http = require('http')
-var auth = require('basic-auth')
-var compare = require('tsscmp')
+app.use(express.static(__dirname)); // Current directory is root
+//app.use(express.static(path.join(__dirname, 'public'))); //  "public" off of current is root
 
-// Create server
-var server = http.createServer(function (req, res) {
-  var credentials = auth(req)
-
-  // Check credentials
-  // The "check" function will typically be against your user store
-  if (!credentials || !check(credentials.name, credentials.pass)) {
-    res.statusCode = 401
-    res.setHeader('WWW-Authenticate', 'Basic realm="example"')
-    res.end('Access denied')
-  } else {
-    res.end('Access granted')
-  }
-})
- 
-// Basic function to validate credentials for example
-function check (name, pass) {
-  var valid = true
-
-  // Simple method to prevent short-circut and use timing-safe compare
-  valid = compare(name, 'john') && valid
-  valid = compare(pass, 'secret') && valid
-
-  return valid
-}
-
-// Listen
-server.listen(3000)
+app.listen(80);
+console.log('Listening on port 80');
