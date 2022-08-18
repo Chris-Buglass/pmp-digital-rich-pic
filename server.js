@@ -1,16 +1,23 @@
 var http = require('http')
-var express = require('express');
-var app = express();
-var path = require('path');
-var credentials = auth(req)
-if (!credentials || !check(credentials.name, credentials.pass)) {
-  res.statusCode = 401
-  res.setHeader('WWW-Authenticate', 'Basic realm="example"')
-  res.end('Access denied')
-} else {
-  res.end('Access granted')
-}
+var auth = require('basic-auth')
+var compare = require('tsscmp')
 
+// Create server
+var server = http.createServer(function (req, res) {
+  var credentials = auth(req)
+
+  // Check credentials
+  // The "check" function will typically be against your user store
+  if (!credentials || !check(credentials.name, credentials.pass)) {
+    res.statusCode = 401
+    res.setHeader('WWW-Authenticate', 'Basic realm="example"')
+    res.end('Access denied')
+  } else {
+    res.end('Access granted')
+  }
+})
+
+// Basic function to validate credentials for example
 function check (name, pass) {
   var valid = true
 
@@ -21,8 +28,5 @@ function check (name, pass) {
   return valid
 }
 
-app.use(express.static(__dirname)); // Current directory is root
-//app.use(express.static(path.join(__dirname, 'public'))); //  "public" off of current is root
-
-app.listen(process.env.PORT || 5000);
-console.log('Listening');
+// Listen
+server.listen(process.env.PORT || 3000)
