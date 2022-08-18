@@ -1,6 +1,7 @@
 // var http = require('http')
 // var auth = require('basic-auth')
 var compare = require('tsscmp')
+const path = require('path');
 //
 // // Create server
 // var server = http.createServer(function (req, res) {
