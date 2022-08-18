@@ -13,7 +13,7 @@ var server = http.createServer(function (req, res) {
     res.setHeader('WWW-Authenticate', 'Basic realm="example"')
     res.end('Access denied. Please check you have the correct username and password.')
   } else {
-    res.next()
+   next()
   }
 })
 
