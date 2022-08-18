@@ -1,0 +1,162 @@
+
+.fade-in {
+    animation: fadein 500ms;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+
+#work1, #work2, #work3, #work4, #work5, #work6,
+#maternity1, #maternity2, #maternity3, #maternity4, #maternity5, #maternity6, #maternity7,
+#care1, #care2, #care3, #care4, #care5, #care6, #care7,
+#bereavement1, #bereavement2, #bereavement3, #bereavement4, #bereavement5, #bereavement6, #bereavement7,
+#children1, #children2, #children3, #children4, #children5, #children6, #children7,
+#attendance1, #attendance2, #attendance3, #attendance4, #attendance5, #attendance6, #attendance7,
+#retirement1, #retirement2, #retirement3, #retirement4, #retirement5, #retirement6, #retirement7 {
+		filter: drop-shadow(5px 5px 5px hsla(172, 100%, 0%, 0.2));
+}
+
+.hidden {
+display: none;
+}
+.parent {
+  pointer-events: none;
+}
+.parent > * {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: 700ms opacity,700ms transform, 700ms filter;
+}
+.child {
+  cursor: pointer;
+  pointer-events: auto;
+   }
+
+@keyframes dash {
+  to {
+    stroke-dashoffset:200;
+  }
+}
+.parent:hover > .silentchild, .parent:hover > .child {
+	opacity: 0.2;
+	/* transform: scale(0.9); */
+	/* filter: blur(5px) drop-shadow(5px 5px 5px hsla(172, 100%, 0%, 0.2)); */
+}
+
+
+.parent:hover > .child:hover {
+  filter: none;
+  position: relative;
+  transform: scale3d(1.1, 1.1, 1.1);
+  opacity: 1;
+}
+
+.child:hover g #work1, .child:hover g #bereavement1 {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: story-throb 6s 0s infinite linear;
+}
+.child:hover g #work2, .child:hover g #bereavement2 {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: story-throb 6s 1s infinite linear;
+}
+
+.child:hover g #work3, .child:hover g #bereavement3 {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: story-throb 6s 2s infinite linear;
+}
+
+.child:hover g #work4, .child:hover g #bereavement4 {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: story-throb 6s 3s infinite linear;
+}
+.child:hover g #work5, .child:hover g #bereavement5 {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: story-throb 6s 4s infinite linear;
+}
+.child:hover g #work6, .child:hover g #bereavement6 {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: story-throb 6s 5s infinite linear;
+}
+@keyframes story-throb {
+ from {
+	 transform: scale3d(1, 1, 1);	
+ }
+ 10% {transform: scale3d(1.1, 1.1, 1.1);
+	  filter: drop-shadow( 0px 0px 100px rgba(255, 255, 255, 1))}
+ 20% {transform: scale3d(1, 1, 1);
+      filter: none;}
+ to {
+	 transform: scale3d(1, 1, 1);	
+ }
+}
+
+.child:hover g g .animated-path {
+	stroke-dasharray: 100 10;
+	animation: dash 5s infinite linear reverse;
+
+}
+
+@keyframes throb {
+    from {filter: drop-shadow( 0px 0px 60px rgba(255, 255, 255, 0.85))}
+    20%{filter: drop-shadow( 0px 0px 60px rgba(245, 40, 154, 0.82))}
+	    40%{filter: drop-shadow( 0px 0px 60px rgba(255, 255, 255, 0.82))}
+		60%{filter: drop-shadow( 0px 0px 60px rgba(255, 255, 255, 0.82))}
+    to {filter: drop-shadow( 0px 0px 60px rgba(83, 245, 196, 0.85))}
+}
+
+.throbs {
+	animation: throb 5s infinite;
+}
+.parent:focus > .child {
+opacity: 0.4;
+}
+.child:focus {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.beam {
+	filter: drop-shadow(5px 5px 5px hsla(172, 100%, 0%, 0.2));
+}
+.silentchild {
+	filter: drop-shadow(5px 5px 5px hsla(172, 100%, 0%, 0.2));
+	}
+.child:hover g .beam {
+	filter: url(#outline) saturate(1.5) hue-rotate(15deg);
+}
+
+#labels {
+		filter: drop-shadow(5px 5px 5px hsla(172, 100%, 0%, 0.2));
+
+}
+@keyframes beamfade {
+    from {
+        filter: brightness(1)
+    }
+    to {
+        filter: brightness(0.5)
+    }
+}
+
+#richpic {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s; 
+}
+
+#richpic.fade {
+	display: block;
+  opacity: 1;
+}

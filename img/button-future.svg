@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="dwp-digital-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#2BA197;}
+	.st2{font-family:'Arial';font-weight: 700;}
+	.st3{font-size:52px;}
+	.st4{fill:none;stroke:#2BA197;stroke-width:7;stroke-miterlimit:10;}
+</style>
+<rect x="22" y="108.5" class="st0" width="208.4" height="141.5"/>
+<g>
+	<rect x="39.9" y="49.3" class="st0" width="165.6" height="170.2"/>
+	<text transform="matrix(1 0 0 1 39.8693 86.5502)"><tspan x="0" y="0" class="st1 st2 st3">Our </tspan><tspan x="0" y="62.4" class="st1 st2 st3">Digital</tspan><tspan x="0" y="124.8" class="st1 st2 st3">Future</tspan></text>
+</g>
+<g>
+	<g>
+		<polyline class="st4" points="240.6,221.5 240.6,10.1 9,10.1 9,236.2 207.1,236.2 		"/>
+		<g>
+			<polygon class="st1" points="203.1,250.2 227.2,236.2 203.1,222.3 			"/>
+		</g>
+	</g>
+</g>
+</svg>
