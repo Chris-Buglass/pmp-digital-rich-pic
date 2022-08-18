@@ -1,15 +1,21 @@
 {
-  "dependencies": {
-    "node-static": "^0.7.11"
-  },
   "name": "dwp-digital-rich-picture",
   "version": "1.0.0",
-  "description": "An interactive site exploring the DWP Digital Rich Picture.",
+  "description": "",
   "main": "server.js",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "mime": "^1.6.0",
+    "node-static": "^0.7.11",
+    "minimist": "^0.0.10",
+    "optimist": "^0.6.1",
+    "wordwrap": "^0.0.3"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "Chris Buglass",
+  "author": "",
   "license": "ISC"
 }
