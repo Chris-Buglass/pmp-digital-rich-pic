@@ -13,7 +13,7 @@ var server = http.createServer(function (req, res) {
     res.setHeader('WWW-Authenticate', 'Basic realm="example"')
     res.end('Access denied')
   } else {
-    res.end('Access granted')
+    res.end()
   }
 })
 
@@ -22,8 +22,8 @@ function check (name, pass) {
   var valid = true
 
   // Simple method to prevent short-circut and use timing-safe compare
-  valid = compare(name, 'john') && valid
-  valid = compare(pass, 'secret') && valid
+  valid = compare(name, process.env.PASSWORD) && valid
+  valid = compare(pass, process.env.USER) && valid
 
   return valid
 }
