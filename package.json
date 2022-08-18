@@ -5,10 +5,10 @@
   "name": "dwp-digital-rich-picture",
   "version": "1.0.0",
   "description": "An interactive site exploring the DWP Digital Rich Picture.",
-  "main": "index.js",
+  "main": "server.js",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
   },
   "author": "Chris Buglass",
   "license": "ISC"
