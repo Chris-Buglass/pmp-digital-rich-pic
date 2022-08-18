@@ -11,9 +11,9 @@ var server = http.createServer(function (req, res) {
   if (!credentials || !check(credentials.name, credentials.pass)) {
     res.statusCode = 401
     res.setHeader('WWW-Authenticate', 'Basic realm="example"')
-    res.end('Access denied')
+    res.end('Access denied. Please check you have the correct username and password.')
   } else {
-    res.end("Access granrwb")
+    res.next()
   }
 })
 
